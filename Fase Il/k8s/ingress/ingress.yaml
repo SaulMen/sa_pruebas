@@ -1,0 +1,70 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sa-workshop-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, PUT, DELETE"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+  namespace: proyecto-sa
+spec:
+  rules:
+  - host:  138.197.240.72.nip.io
+    http:
+      paths:
+      - path: /autenticacion/([^/]+)(/.*|$)
+        pathType: Prefix
+        backend:
+          service:
+            name: service-autenticacion
+            port:
+              number: 3000
+      - path: /proveedores/([^/]+)(/.*|$)
+        pathType: Prefix
+        backend:
+          service:
+            name: service-proveedores
+            port:
+              number: 8081
+      - path: /catalogo/([^/]+)(/.*|$)
+        pathType: Prefix
+        backend:
+          service:
+            name: service-catalogo
+            port:
+              number: 3001
+      - path: /cliente/([^/]+)(/.*|$)
+        pathType: Prefix
+        backend:
+          service:
+            name: service-cliente
+            port:
+              number: 5000
+      - path: /pago/([^/]+)(/.*|$)
+        pathType: Prefix
+        backend:
+          service:
+            name: service-pago
+            port:
+              number: 5002
+      - path: /compras/([^/]+)(/.*|$)
+        pathType: Prefix
+        backend:
+          service:
+            name: service-compras
+            port:
+              number: 8080
+      - path: /api-consumir/([^/]+)(/.*|$)
+        pathType: Prefix
+        backend:
+          service:
+            name: service-consumir
+            port:
+              number: 3002
+      - path: /admin-panel/([^/]+)(/.*|$)
+        pathType: Prefix
+        backend:
+          service:
+            name: service-adminpanel
+            port:
+              number: 3003

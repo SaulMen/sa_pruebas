@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: proyecto-sa
+  name: service-autenticacion
+spec:
+  ports:
+  - name: autenticacion-port
+    port: 3000
+    targetPort: 3000
+  selector:
+      name: deploy-autenticacion
+  type: NodePort

@@ -1,0 +1,5 @@
+pip install flask-cors
+pip install PyJWT
+pip install flask
+pip install email
+pip install boto3

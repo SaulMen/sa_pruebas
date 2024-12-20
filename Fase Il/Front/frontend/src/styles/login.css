@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ebe9e99c;
+    font-family: Arial, sans-serif;
+}
+
+.main-login {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    align-content: center;
+    /*1*/
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-login >p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.main-login p{
+    margin: 8px 0px;
+}
+
+.main-login form{
+    width: 100%;
+}
+
+.main-login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; 
+}
+
+/* radio */
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* espacio entre  botones */
+    margin-bottom: 20px;
+}
+
+.radio-group label {
+    position: relative;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-group label:hover {
+    background-color: #e2e6ea;
+}
+
+.radio-group input[type="radio"] {
+    display: none; /* ocultar forma original */
+}
+
+.radio-group input[type="radio"]:checked + label {
+    background-color: #007BFF;
+    color: white;
+    border-color: #0056b3;
+}
+
+
+.main-login button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-login button:hover {
+    background-color: #0056b3;
+}
+
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #0056b3;
+}
+
+/* 2 */
+@media (max-width: 480px) {
+    .main-login {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .main-login button {
+        font-size: 0.9rem;
+    }
+}

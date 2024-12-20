@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: proyecto-sa
+  name: service-compras
+spec:
+  ports:
+  - name: compras-port
+    port: 8080
+    targetPort: 8080
+  selector:
+      name: deploy-compras
+  type: NodePort

@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ebe9e99c;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/*Header*/
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1c283f;
+    display: flex;
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nombre-empresa {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    font-weight: 600;
+    padding: 0 15px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #7fadd3;
+}
+
+/*Body*/
+.admin-api {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.api-input {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.load-button {
+    padding: 10px 20px;
+    background-color: #1c283f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.load-button:hover {
+    background-color: #7fadd3;
+}

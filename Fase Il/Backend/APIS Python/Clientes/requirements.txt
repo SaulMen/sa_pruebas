@@ -1,0 +1,5 @@
+Flask
+Flask-Cors
+PyJWT
+boto3
+mysql-connector-python

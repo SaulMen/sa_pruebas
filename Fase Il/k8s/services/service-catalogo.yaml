@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: proyecto-sa
+  name: service-catalogo
+spec:
+  ports:
+  - name: catalogo-port
+    port: 3001
+    targetPort: 3001
+  selector:
+      name: deploy-catalogo
+  type: NodePort

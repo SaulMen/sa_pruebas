@@ -1,0 +1,175 @@
+image: docker:latest
+variables:
+  DOCKER_TLS_CERTDIR: ""
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay2
+  CONTAINER_IMAGE_NAME: $CI_REGISTRY_NAME
+services:
+  - docker:dind
+#before_script:
+#  - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+stages:
+  - build
+  - test
+  - post-build
+  - delivery
+  - deploy
+
+build:
+  stage: build
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - unset DOCKER_HOST
+    - echo "********>INICIO FASE BUILD<********"
+
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-adminpanel:latest" "./Fase Il/Backend/APIS Node/Admin-panel"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-autenticacion:latest" "./Fase Il/Backend/APIS Node/Autenticacion"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-catalogo:latest" "./Fase Il/Backend/APIS Node/Catalogo"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-client:latest" "./Fase Il/Backend/APIS Python/Clientes"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-compras:latest" "./Fase Il/Backend/APIS Go/Compras"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-consumir:latest" "./Fase Il/Backend/APIS Node/Api-Consumir"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-notification:latest" "./Fase Il/Backend/APIS Python/Notificaciones"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-pagos:latest" "./Fase Il/Backend/APIS Python/Pagos"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-proveedores:latest" "./Fase Il/Backend/APIS Go/Proveedores"
+
+    - docker push "$CI_REGISTRY_IMAGE/f2-adminpanel:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-autenticacion:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-catalogo:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-client:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-compras:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-consumir:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-notification:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-pagos:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-proveedores:latest"
+    
+
+    - echo "********>FIN FASE BUILD<********"
+  tags:
+    - docker
+  only:
+    refs:
+      - /^feature/([a-zA-Z]|[0-9]|-|_)+$/
+      - develop
+
+test:
+  stage: test
+  script:
+    - unset DOCKER_HOST
+    - echo "INICIO FASE TEST"
+
+    # microservicios node
+    - echo $DB_USER
+    #- docker run --rm -e DB_HOST=$DB_HOST -e DB_USER=$DB_USER -e DB_PASSWORD=$DB_PASSWORD -e DB_NAME=$DB_NAME -e DB_PORT=$DB_PORT -e JWT_SECRET=$JWT_SECRET -e S3_BUCKET_NAME=$S3_BUCKET_NAME -e S3_REGION=$S3_REGION -e S3_ACCESS_KEY=$S3_ACCESS_KEY -e S3_SECRET_KEY=$S3_SECRET_KEY $CI_REGISTRY_IMAGE/f2-adminpanel:latest npm test
+    #- docker run --rm -e DB_HOST=$DB_HOST -e DB_USER=$DB_USER -e DB_PASSWORD=$DB_PASSWORD -e DB_NAME=$DB_NAME -e DB_PORT=$DB_PORT -e JWT_SECRET=$JWT_SECRET -e S3_BUCKET_NAME=$S3_BUCKET_NAME -e S3_REGION=$S3_REGION -e S3_ACCESS_KEY=$S3_ACCESS_KEY -e S3_SECRET_KEY=$S3_SECRET_KEY $CI_REGISTRY_IMAGE/f2-consumir:latest npm test
+    #- docker run --rm -e DB_HOST=$DB_HOST -e DB_USER=$DB_USER -e DB_PASSWORD=$DB_PASSWORD -e DB_NAME=$DB_NAME -e DB_PORT=$DB_PORT -e JWT_SECRET=$JWT_SECRET -e S3_BUCKET_NAME=$S3_BUCKET_NAME -e S3_REGION=$S3_REGION -e S3_ACCESS_KEY=$S3_ACCESS_KEY -e S3_SECRET_KEY=$S3_SECRET_KEY $CI_REGISTRY_IMAGE/f2-autenticacion:latest npm test
+    - docker run --rm -e DB_HOST=$DB_HOST -e DB_USER=$DB_USER -e DB_PASSWORD=$DB_PASSWORD -e DB_NAME=$DB_NAME -e DB_PORT=$DB_PORT -e JWT_SECRET=$JWT_SECRET -e S3_BUCKET_NAME=$S3_BUCKET_NAME -e S3_REGION=$S3_REGION -e S3_ACCESS_KEY=$S3_ACCESS_KEY -e S3_SECRET_KEY=$S3_SECRET_KEY $CI_REGISTRY_IMAGE/f2-catalogo:latest npm test
+
+    - echo "FIN FASE TEST"
+  tags:
+    - docker
+  only:
+    refs:
+      - /^feature/([a-zA-Z]|[0-9]|-|_)+$/
+      - develop
+
+
+post-build:
+  stage: post-build
+  image:
+    name: bitnami/kubectl:latest
+    entrypoint: ['']
+  script:
+    - kubectl config get-contexts
+    - kubectl config use-context JosephMarroquin/2v2024proyectosa:agent-desarrollo
+    - kubectl apply -f "./Fase Il/k8s/deployments/*"
+    - kubectl apply -f "./Fase Il/k8s/services/*"
+  tags:
+    - docker
+  only:
+    refs:
+      - develop
+
+delivery_release:
+  stage: delivery
+  rules: 
+    - if: '$CI_COMMIT_TAG'
+  script:
+    - echo "********>INICIO DELIVERY RELEASE<********"
+    - echo "release con el tag $CI_COMMIT_TAG"
+    - echo "$CI_COMMIT_MESSAGE"
+    - echo "********>FIN DELIVERY RELEASE<********"
+  tags:
+    - docker
+
+delivery_subir_docker:
+  stage: delivery
+  needs: 
+    - delivery_release
+  rules: 
+    - if: '$CI_COMMIT_TAG'
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - unset DOCKER_HOST
+    - echo "********>INICIO DELIVERY SUBIR IMAGENES DOCKER<********"
+
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-adminpanel:$CI_COMMIT_TAG" "./Fase Il/Backend/APIS Node/Admin-panel"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-autenticacion:$CI_COMMIT_TAG" "./Fase Il/Backend/APIS Node/Autenticacion"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-catalogo:$CI_COMMIT_TAG" "./Fase Il/Backend/APIS Node/Catalogo"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-client:$CI_COMMIT_TAG" "./Fase Il/Backend/APIS Python/Clientes"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-compras:$CI_COMMIT_TAG" "./Fase Il/Backend/APIS Go/Compras"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-consumir:$CI_COMMIT_TAG" "./Fase Il/Backend/APIS Node/Api-Consumir"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-notification:$CI_COMMIT_TAG" "./Fase Il/Backend/APIS Python/Notificaciones"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-pagos:$CI_COMMIT_TAG" "./Fase Il/Backend/APIS Python/Pagos"
+    - docker build -t "$CI_REGISTRY_IMAGE/f2-proveedores:$CI_COMMIT_TAG" "./Fase Il/Backend/APIS Go/Proveedores"
+
+    - docker push "$CI_REGISTRY_IMAGE/f2-adminpanel:$CI_COMMIT_TAG"
+    - docker push "$CI_REGISTRY_IMAGE/f2-autenticacion:$CI_COMMIT_TAG"
+    - docker push "$CI_REGISTRY_IMAGE/f2-catalogo:$CI_COMMIT_TAG"
+    - docker push "$CI_REGISTRY_IMAGE/f2-client:$CI_COMMIT_TAG"
+    - docker push "$CI_REGISTRY_IMAGE/f2-compras:$CI_COMMIT_TAG"
+    - docker push "$CI_REGISTRY_IMAGE/f2-consumir:$CI_COMMIT_TAG"
+    - docker push "$CI_REGISTRY_IMAGE/f2-notification:$CI_COMMIT_TAG"
+    - docker push "$CI_REGISTRY_IMAGE/f2-pagos:$CI_COMMIT_TAG"
+    - docker push "$CI_REGISTRY_IMAGE/f2-proveedores:$CI_COMMIT_TAG"
+
+    - docker tag "$CI_REGISTRY_IMAGE/f2-adminpanel:$CI_COMMIT_TAG" "$CI_REGISTRY_IMAGE/f2-adminpanel:latest"
+    - docker tag "$CI_REGISTRY_IMAGE/f2-autenticacion:$CI_COMMIT_TAG" "$CI_REGISTRY_IMAGE/f2-autenticacion:latest"
+    - docker tag "$CI_REGISTRY_IMAGE/f2-catalogo:$CI_COMMIT_TAG" "$CI_REGISTRY_IMAGE/f2-catalogo:latest"
+    - docker tag "$CI_REGISTRY_IMAGE/f2-client:$CI_COMMIT_TAG" "$CI_REGISTRY_IMAGE/f2-client:latest"
+    - docker tag "$CI_REGISTRY_IMAGE/f2-compras:$CI_COMMIT_TAG" "$CI_REGISTRY_IMAGE/f2-compras:latest"
+    - docker tag "$CI_REGISTRY_IMAGE/f2-consumir:$CI_COMMIT_TAG" "$CI_REGISTRY_IMAGE/f2-consumir:latest"
+    - docker tag "$CI_REGISTRY_IMAGE/f2-notification:$CI_COMMIT_TAG" "$CI_REGISTRY_IMAGE/f2-notification:latest"
+    - docker tag "$CI_REGISTRY_IMAGE/f2-pagos:$CI_COMMIT_TAG" "$CI_REGISTRY_IMAGE/f2-pagos:latest"
+    - docker tag "$CI_REGISTRY_IMAGE/f2-proveedores:$CI_COMMIT_TAG" "$CI_REGISTRY_IMAGE/f2-proveedores:latest"
+
+    - docker push "$CI_REGISTRY_IMAGE/f2-adminpanel:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-autenticacion:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-catalogo:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-client:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-compras:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-consumir:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-notification:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-pagos:latest"
+    - docker push "$CI_REGISTRY_IMAGE/f2-proveedores:latest"
+
+    - echo "********>FIN DELIVERY SUBIR IMAGENES DOCKER<********"
+  tags:
+    - docker
+
+deploy:
+  stage: deploy
+  image:
+    name: bitnami/kubectl:latest
+    entrypoint: ['']
+  script:
+    - kubectl config get-contexts
+    - kubectl config use-context JosephMarroquin/2v2024proyectosa:agent-produccion
+    - kubectl apply -f "./Fase Il/k8s/deployments/*"
+    - kubectl apply -f "./Fase Il/k8s/services/*"
+  tags:
+    - docker
+  only:
+    refs:
+      - main  
