@@ -27,7 +27,7 @@ const Home = () => {
             return;
         }
 
-        fetch('http://localhost:3003/admin-panel/currency/')
+        fetch('http://138.197.240.72.nip.io/admin-panel/currency/')
             .then((response) => response.json())
             .then((data) => {
                 console.log("monedas:", data);
@@ -37,7 +37,7 @@ const Home = () => {
                 console.error('Error al cargar las monedas:', error);
             });
 
-        fetch(`http://localhost:3001/catalogo/productos/${coin}`)
+        fetch(`http://138.197.240.72.nip.io/catalogo/productos/${coin}`)
             .then((response) => response.json())
             .then((data) => {
                 const productos = data.productos || [];
@@ -75,7 +75,7 @@ const Home = () => {
     const handleBuy = (productId) => {
         const cantidad = quantities[productId] || 1;
 
-        fetch('http://localhost:7000/compras/agregarcarrito', {
+        fetch('http://138.197.240.72.nip.io/compras/agregarcarrito', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ const Home = () => {
             return;
         }
 
-        fetch(`http://localhost:3001/catalogo/productos-buscar/${coin}`, {
+        fetch(`http://138.197.240.72.nip.io/catalogo/productos-buscar/${coin}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

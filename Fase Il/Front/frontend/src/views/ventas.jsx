@@ -10,7 +10,7 @@ const Ventas = () => {
     useEffect(() => {
         const fetchVentas = async () => {
             try {
-                const response = await fetch('http://localhost:9000/proveedores/ventasproveedor', {
+                const response = await fetch('http://138.197.240.72.nip.io/proveedores/ventasproveedor', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,

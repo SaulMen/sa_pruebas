@@ -22,7 +22,7 @@ const Admin = () => {
         }
 
         // Llamada al endpoint para obtener todos los usuarios (clientes y proveedores)
-        fetch('http://localhost:3003/admin-panel/user', {
+        fetch('http://138.197.240.72.nip.io/admin-panel/user', {
             
         })
             .then((response) => response.json())
@@ -71,8 +71,8 @@ const Admin = () => {
     const handleSubmit = () => {
         console.log(editingUser);
         const endpoint = editingUser
-            ? `http://localhost:3003/admin-panel/user/${editingUser.id_usuario}`
-            : "http://localhost:3003/admin-panel/user";
+            ? `http://138.197.240.72.nip.io/admin-panel/user/${editingUser.id_usuario}`
+            : "http://138.197.240.72.nip.io/admin-panel/user";
         let dataToSend={};
         if(editingUser){
             dataToSend =
@@ -158,7 +158,7 @@ const Admin = () => {
 
     const handleDelete = (id) => {
         if (window.confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
-            fetch(`http://localhost:3003/admin-panel/user/${id}`, {
+            fetch(`http://138.197.240.72.nip.io/admin-panel/user/${id}`, {
                 method: 'DELETE',
             })
                 .then((response) => {

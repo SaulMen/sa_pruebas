@@ -19,7 +19,7 @@ const AdminMon = () => {
             return;
         }
 
-        fetch('http://localhost:3003/admin-panel/currency/', {
+        fetch('http://138.197.240.72.nip.io/admin-panel/currency/', {
         })
             .then((response) => response.json())
             .then((data) => {
@@ -45,7 +45,7 @@ const AdminMon = () => {
     const handleDelete = (id) => {
         //console.log(monedas);
         if (window.confirm('¿Estás seguro de que deseas eliminar esta moneda?')) {
-            fetch(`http://localhost:3003/admin-panel/currency/${id}`, {
+            fetch(`http://138.197.240.72.nip.io/admin-panel/currency/${id}`, {
                 method: 'DELETE',
             })
                 .then((response) => {
@@ -64,7 +64,7 @@ const AdminMon = () => {
     };
 
     const handleAddCurrency = () => {
-        fetch('http://localhost:3003/admin-panel/currency/precreate')
+        fetch('http://138.197.240.72.nip.io/admin-panel/currency/precreate')
             .then((response) => response.json())
             .then((data) => {
                 setMonedas2(data || []);
@@ -86,7 +86,7 @@ const AdminMon = () => {
                 codigo: moneda.codigo
             }
         console.log(dataToSend);
-        fetch('http://localhost:3003/admin-panel/currency/create', {
+        fetch('http://138.197.240.72.nip.io/admin-panel/currency/create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

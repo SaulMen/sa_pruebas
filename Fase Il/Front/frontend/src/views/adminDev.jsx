@@ -17,7 +17,7 @@ const AdminDev = () => {
         }
 
          // Llamada al endpoint para obtener las devoluciones
-         fetch('http://localhost:5000/cliente/devoluciones', {
+         fetch('http://138.197.240.72.nip.io/cliente/devoluciones', {
             headers: {
                 'Authorization': `Bearer ${token}`, // Asegúrate de enviar el token
             },
@@ -47,7 +47,7 @@ const AdminDev = () => {
         };
         console.log(body, idDevolucion);
 
-        fetch(`http://localhost:5000/cliente/devoluciones/${idDevolucion}`, {
+        fetch(`http://138.197.240.72.nip.io/cliente/devoluciones/${idDevolucion}`, {
             method: 'PUT', // Método para actualizar
             headers: {
                 'Content-Type': 'application/json',

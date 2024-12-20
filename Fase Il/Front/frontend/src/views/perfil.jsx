@@ -29,8 +29,8 @@ const Perfil = () => {
 
         const endpoint =
             userType === 'proveedor'
-                ? 'http://localhost:9000/proveedores/perfilproveedor'
-                : 'http://localhost:5000/cliente/info';
+                ? 'http://138.197.240.72.nip.io/proveedores/perfilproveedor'
+                : 'http://138.197.240.72.nip.io/cliente/info';
         const payload = JSON.stringify({ id_producto: userId });
 
         fetch(endpoint, {
@@ -76,7 +76,7 @@ const Perfil = () => {
             // Enviar la imagen al servidor
             const token = localStorage.getItem('token');
 
-            const response = await fetch('http://localhost:5000/cliente/subir_foto', {
+            const response = await fetch('http://138.197.240.72.nip.io/cliente/subir_foto', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ const Perfil = () => {
     const fetchTarjetas = () => {
         const token = localStorage.getItem('token');
 
-        fetch('http://localhost:5000/cliente/tarjetas', {
+        fetch('http://138.197.240.72.nip.io/cliente/tarjetas', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ const Perfil = () => {
     const handleDeleteCard = (id_tarjeta) => {
         const token = localStorage.getItem('token');
 
-        fetch(`http://localhost:5000/cliente/tarjetas/${id_tarjeta}`, {
+        fetch(`http://138.197.240.72.nip.io/cliente/tarjetas/${id_tarjeta}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -167,7 +167,7 @@ const Perfil = () => {
     const handleSaveCard = () => {
         const token = localStorage.getItem('token');
 
-        fetch('http://localhost:5000/cliente/registrar_tarjeta', {
+        fetch('http://138.197.240.72.nip.io/cliente/registrar_tarjeta', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

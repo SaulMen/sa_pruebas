@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/AdminApi.css';
+import '../styles/adminApi.css';
 
 const AdminApi = () => {
     const navigate = useNavigate();
@@ -52,7 +52,7 @@ const AdminApi = () => {
             });
 
         // Realiza una solicitud a la API ingresada
-        fetch('http://localhost:4800/api-consumir/procesar-productos', {
+        fetch('http://138.197.240.72.nip.io/api-consumir/procesar-productos', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

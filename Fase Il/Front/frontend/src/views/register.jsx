@@ -28,8 +28,8 @@ const Register = () => {
         e.preventDefault();
 
         const endpoint = userType === 'cliente'
-            ? 'http://localhost:3000/autenticacion/registro-cliente'
-            : 'http://localhost:3000/autenticacion/registro-proveedor';
+            ? 'http://138.197.240.72.nip.io/autenticacion/registro-cliente'
+            : 'http://138.197.240.72.nip.io/autenticacion/registro-proveedor';
 
         const dataToSend =
             userType === 'cliente'

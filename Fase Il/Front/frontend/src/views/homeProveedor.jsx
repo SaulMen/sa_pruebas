@@ -27,7 +27,7 @@ const HomeProveedor = () => {
             console.log('Token disponible:', token);
     
             // Realizar la solicitud para obtener los productos
-            fetch('http://localhost:9000/proveedores/verproductos', {
+            fetch('http://138.197.240.72.nip.io/proveedores/verproductos', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ const HomeProveedor = () => {
         }
     
         try {
-            const response = await fetch('http://localhost:9000/proveedores/productos', {
+            const response = await fetch('http://138.197.240.72.nip.io/proveedores/productos', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -147,7 +147,7 @@ const HomeProveedor = () => {
         }
     
         try {
-            const response = await fetch('http://localhost:9000/proveedores/actualizarproducto', {
+            const response = await fetch('http://138.197.240.72.nip.io/proveedores/actualizarproducto', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -193,7 +193,7 @@ const HomeProveedor = () => {
         if (!confirmDelete) return;
     
         try {
-            const response = await fetch('http://localhost:9000/proveedores/eliminarproducto', {
+            const response = await fetch('http://138.197.240.72.nip.io/proveedores/eliminarproducto', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

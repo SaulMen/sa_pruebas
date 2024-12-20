@@ -20,7 +20,7 @@ const Carrito = () => {
         }
 
             // Saldo cliente
-        fetch('http://localhost:5000/cliente/saldo', {
+        fetch('http://138.197.240.72.nip.io/cliente/saldo', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const Carrito = () => {
                 console.error('Error al cargar el saldo:', error);
             });
 
-        fetch('http://localhost:3003/admin-panel/currency/')
+        fetch('http://138.197.240.72.nip.io/admin-panel/currency/')
             .then((response) => response.json())
             .then((data) => {
                 console.log("monedas:", data);
@@ -46,7 +46,7 @@ const Carrito = () => {
                 console.error('Error al cargar las monedas:', error);
             });
                         //${coin.toLocaleLowerCase()}
-        fetch(`http://localhost:7000/compras/vercarrito/${coin.toLowerCase()}`, {
+        fetch(`http://138.197.240.72.nip.io/compras/vercarrito/${coin.toLowerCase()}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const Carrito = () => {
     };
 
     const eliminarProducto = (id_producto) => {
-        fetch('http://localhost:7000/compras/eliminarcarrito', {
+        fetch('http://138.197.240.72.nip.io/compras/eliminarcarrito', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ const Carrito = () => {
         };
         console.log(codigoPromocion, body)
 
-        fetch(`http://localhost:5002/pago/procesar-pago/${coin.toLowerCase()}`, {
+        fetch(`http://138.197.240.72.nip.io/pago/procesar-pago/${coin.toLowerCase()}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

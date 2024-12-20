@@ -17,7 +17,7 @@ const Devolucion = () => {
 
         const fetchCompras = async () => {
             try {
-                const response = await fetch('http://localhost:5000/cliente/compras', {
+                const response = await fetch('http://138.197.240.72.nip.io/cliente/compras', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -39,7 +39,7 @@ const Devolucion = () => {
     // Manejar la devolución de un producto
     const handleDevolucion = async (idProducto, cantidad) => {
         try {
-            const response = await fetch('http://localhost:5000/cliente/devolucion', {
+            const response = await fetch('http://138.197.240.72.nip.io/cliente/devolucion', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

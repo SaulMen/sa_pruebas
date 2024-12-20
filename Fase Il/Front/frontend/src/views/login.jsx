@@ -28,7 +28,7 @@ const Login = () => {
                 localStorage.setItem('token', 'admin');
                 navigate('/admin');
             }else{
-                const response = await fetch('http://localhost:3000/autenticacion/login', {
+                const response = await fetch('http://138.197.240.72.nip.io/autenticacion/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

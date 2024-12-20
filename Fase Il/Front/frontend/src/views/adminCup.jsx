@@ -20,7 +20,7 @@ const AdminCup = () => {
             return;
         }
 
-        fetch('http://localhost:3003/admin-panel/cupon', {
+        fetch('http://138.197.240.72.nip.io/admin-panel/cupon', {
         })
             .then((response) => response.json())
             .then((data) => {
@@ -68,8 +68,8 @@ const AdminCup = () => {
 
     const handleSubmit = () => {
         const endpoint = editingCupon
-            ? `http://localhost:3003/admin-panel/cupon/${editingCupon.id_cupon}`
-            : 'http://localhost:3003/admin-panel/cupon';
+            ? `http://138.197.240.72.nip.io/admin-panel/cupon/${editingCupon.id_cupon}`
+            : 'http://138.197.240.72.nip.io/admin-panel/cupon';
         const method = editingCupon ? 'PUT' : 'POST';
         const dataToSend = editingCupon ?
             {
@@ -122,7 +122,7 @@ const AdminCup = () => {
     const handleDelete = (id) => {
         //console.log(cupones);
         if (window.confirm('¿Estás seguro de que deseas eliminar este cupón?')) {
-            fetch(`http://localhost:3003/admin-panel/cupon/${id}`, {
+            fetch(`http://138.197.240.72.nip.io/admin-panel/cupon/${id}`, {
                 method: 'DELETE',
             })
                 .then((response) => {
