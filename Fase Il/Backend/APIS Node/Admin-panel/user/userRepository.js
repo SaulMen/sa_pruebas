@@ -1,12 +1,20 @@
 const db = require('../db');
+const bcrypt = require('bcrypt');
 
 class UserRepository {
     createUser(user) {
         return new Promise((resolve, reject) => {
-            const query = `INSERT INTO usuarios (nombre, email, contraseña, celular, tipo_usuario, rol) VALUES (?, ?, ?, ?, ?, ?)`;
-            db.execute(query, [user.nombre, user.email, user.contraseña, user.celular, user.tipo_usuario, user.rol], (err, result) => {
-                if (err) return reject(err);
-                resolve({ id_usuario: result.insertId, ...user });
+            bcrypt.hash(user.contraseña, 10, (err, hashedPassword) => {
+                if (err) {
+                    console.error(err);
+                    return reject(new Error('Error al encriptar la contraseña'));
+                }
+    
+                const query = `INSERT INTO usuarios (nombre, email, contraseña, celular, tipo_usuario, rol) VALUES (?, ?, ?, ?, ?, ?)`;
+                db.execute(query, [user.nombre, user.email, hashedPassword, user.celular, user.tipo_usuario, user.rol], (err, result) => {
+                    if (err) return reject(err);
+                    resolve({ id_usuario: result.insertId, ...user, contraseña: hashedPassword });
+                });
             });
         });
     }

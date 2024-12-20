@@ -270,7 +270,7 @@ const Admin = () => {
                                 />
                                 <input
                                     type="email"
-                                    name="correo"
+                                    name="email"
                                     placeholder="Correo"
                                     value={formData.email || ""}
                                     onChange={handleFormChange}
@@ -296,12 +296,12 @@ const Admin = () => {
                                     type="text"
                                     name="nombre_empresa"
                                     placeholder="Nombre Empresa"
-                                    value={formData.nombre || ""}
+                                    value={formData.nombre_empresa || ""}
                                     onChange={handleFormChange}
                                 />
                                 <input
                                     type="email"
-                                    name="correo"
+                                    name="email"
                                     placeholder="Correo"
                                     value={formData.email || ""}
                                     onChange={handleFormChange}
