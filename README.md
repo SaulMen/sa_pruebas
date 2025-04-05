@@ -209,10 +209,15 @@ Los meses con mayores ventas (por ejemplo, diciembre) coinciden con temporadas d
 Los productos más populares, como "Sweater-Chaqueta" y "Zapatos formales", reflejan las preferencias actuales de los clientes, mientras que los productos menos vendidos ("Desconocido") podrían ser candidatos para descuentos o eliminación del inventario. Además, existe una clara preferencia por productos prácticos y de uso cotidiano.
 
 ___
-## **RECOMENDACIONES**
+
 1. **Personalización de ofertas basadas en grupos de edad:**
 Dado que los clientes de 26-35 años gastan más, la empresa podría diseñar campañas específicas para este grupo, como ofertas exclusivas o recomendaciones personalizadas de productos que se ajusten a sus intereses.
 2. **Optimización del inventario por región:**
 Identificar las categorías de productos más populares en cada región (por ejemplo, "Calzado" en el Oeste) y ajustar el inventario en consecuencia para reducir costos de almacenamiento y maximizar las ventas.
 
 ____
+## **RECOMENDACIONES**
+```bash
+estudiante ~$ Saul Menchu
+[#############....] (99%) Processing...
+```
