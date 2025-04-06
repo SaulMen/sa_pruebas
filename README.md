@@ -221,3 +221,8 @@ ____
 estudiante ~$ Saul Menchu
 [#############....] (99%) Processing...
 ```
+
+```bash
+ ~$ rm -f OLC EDD SA AYD IA SO MIA ACE
+[#############....] (99%) Processing...
+```
