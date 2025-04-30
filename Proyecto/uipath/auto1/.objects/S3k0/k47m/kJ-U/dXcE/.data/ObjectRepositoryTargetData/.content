@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="5lEKTJfXGU-tY7E1boaBQg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos" CVScreenId="26e5163f-026b-496d-bde5-30e93d62c3d5" CvElementArea="77, 462, 362, 47" CvType="InputBox" DesignTimeRectangle="122, 565, 315, 43" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='refine_region' tag='INPUT' type='text' class='d3-textfield__field d3-textfield__field--white tt-input' placeholder='Ubicación' aaname='' /&gt;" Guid="04c70908-6ec8-4e35-9dda-d07a2cdb0b92" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="93a7b9d1-908e-4141-b84e-20273f96d814" CvElementArea="78, 562, 361, 47" CvType="InputBox" DesignTimeRectangle="92, 578, 16, 16" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' parentid='filters-replacable' tag='svg' class='d3-icon ' aaname='    ' /&gt;" Guid="80d61cb3-6ace-4c17-8812-739aea9bd4de" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="554270b2f6c4996b648a49a4e8c5749d.png" xmlns="">0fNzgdchmIkqWrTxs3WJgxg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

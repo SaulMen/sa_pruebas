@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="I2b9Wn_nEEeE9U2ZPVOHGA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/guatemala.2" CVScreenId="e6805b69-3434-45ff-9a41-172795ce184a" CvElementArea="1066, 275, 45, 45" CvTextArea="911, 289, 182, 16" CvTextArgument="Anterior 1 2" CvType="Button" DesignTimeRectangle="470, 578, 1054, 40" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl type='' class='d3-pagination' parentid='currentlistings' tag='DIV' aaname='               ' check:innerText='Anterior&amp;#xA;1&amp;#xA;2' /&gt;" Guid="99f9b309-17c6-47b9-991f-dcaee1e6af8a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="13c8d5fa-086e-45be-81f7-82d6f8f320aa" CvElementArea="890, 587, 19, 21" CvType="ArrowButton" DesignTimeRectangle="893, 592, 12, 12" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' parentid='currentlistings' tag='svg' class='d3-icon d3-pagination__arrow-icon' aaname='    ' /&gt;" Guid="fdc02f6b-ee42-4cf4-84ce-f5ddafd357e5" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="78e9a06f4c845dc415936c7f728d8c5a.png" xmlns="">0hiR1Ke8jY0-eVTw2iRN2Wg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">MouseScrollSearchedElement</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "INPUT range-lower-68088…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "HSe_An-YEkemeWG5LIXm6g",
+  "Reference": "WifPJQDcckyo2lO85Q63oQ/HSe_An-YEkemeWG5LIXm6g",
+  "ParentRef": "WifPJQDcckyo2lO85Q63oQ/kJ-UkYeZN0q6E4cA5JO8-Q",
+  "Created": "2025-04-23T12:48:37.8312843Z",
+  "Updated": "2025-04-23T12:48:37.8312843Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

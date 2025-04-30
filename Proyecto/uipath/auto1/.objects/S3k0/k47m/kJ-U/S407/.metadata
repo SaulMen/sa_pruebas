@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Menú desplegable",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "S407aV7u-EOzdKba77rTVw",
+  "Reference": "WifPJQDcckyo2lO85Q63oQ/S407aV7u-EOzdKba77rTVw",
+  "ParentRef": "WifPJQDcckyo2lO85Q63oQ/kJ-UkYeZN0q6E4cA5JO8-Q",
+  "Created": "2025-04-23T12:50:52.2855693Z",
+  "Updated": "2025-04-23T12:50:52.2855693Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

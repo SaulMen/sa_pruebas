@@ -1,0 +1,14 @@
+﻿{
+  "Name": "INPUT refine_region",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "dXcEuTd1d06lZLd4Ayblog",
+  "Reference": "WifPJQDcckyo2lO85Q63oQ/dXcEuTd1d06lZLd4Ayblog",
+  "ParentRef": "WifPJQDcckyo2lO85Q63oQ/kJ-UkYeZN0q6E4cA5JO8-Q",
+  "Created": "2025-04-23T12:37:39.9579695Z",
+  "Updated": "2025-04-23T12:37:39.9579695Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

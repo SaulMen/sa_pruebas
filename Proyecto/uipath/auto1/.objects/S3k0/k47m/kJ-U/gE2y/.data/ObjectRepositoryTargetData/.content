@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RYnO9ZUUx0uKrG8c132F5w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos" CVScreenId="0b77e045-4446-4fb2-951c-54eadfc459fc" CvTextArea="120, 578, 47, 14" CvTextArgument="Precio" CvType="Text" DesignTimeRectangle="78, 557, 360, 60" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl aaname='                                  ' parentid='filter-price' tag='DIV' type='' class='d3-dropdown__wrapper' check:innerText='Precio' /&gt;" Guid="6e709904-4e4f-4c09-a0ba-70db7c717422" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0b77e045-4446-4fb2-951c-54eadfc459fc" CvElementArea="85, 574, 27, 26" CvType="Icon" DesignTimeRectangle="89, 577, 20, 20" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl parentid='filter-price' tag='svg' type='' class='d3-icon d3-category-filters__filter-icon' aaname='    ' /&gt;" Guid="0709fa85-5688-424c-afd1-806268deb1f9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFqSURBVEhL1ZOxq4JQFIff398UNNQS0eLaEg7RJIpDNjYYNBYFDeUg4XIe34UrV6/eqw8a3vChnnP8fXq9/lRVJd/k/wlOp5NsNpv6epQgiiI5Ho+S57lcr1d5v9+NPuGTyUQddW2wgHBuXq/XslgsZDqdqmuYzWayWq2scBgk0OHtm1+vl9xuN0nTVPWRmH3wCvrCL5eLJEkiu91O9eM4Vm9izoBT0BcOYRjKcrlU7Pd79SbMtud6Ba5wMAXb7VYtF/PtD98p8IVT10vE7PP5VHU+PLvLnLUErnCelB5kWWb12V1sYbPWELjCeWJ6+tjuA1uY/8Ss1QLfk5dlqfrn81k+n481w330yTHrXgFrGgSBOp/P51YA9IWDd4nu97uq6T/18XjUPXCFg/cjI6B2OBykKIrGrC8cLAF0vUmbIeHQKQCXZGg49AqgSzImHJwCMCVjw8ErAC0ZGw6DBEDw2HAYLPgrXxZU8gtEbFumsjkNLwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e812320c320cf02cbaa6827bf2237831.png" xmlns="">0fiTZvKo3iUy8BUVVvzEoug</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

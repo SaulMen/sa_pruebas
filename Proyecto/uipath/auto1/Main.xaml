@@ -1,0 +1,410 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="956,4207" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="604,4184" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="00de1914-969b-405c-829e-d5f3cd87a7a1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="570,3944" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap:VirtualizedContainerService.HintSize="536,2053" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT refine_region'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="00de1914-969b-405c-829e-d5f3cd87a7a1" Text="Guatemala" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos" CVScreenId="26e5163f-026b-496d-bde5-30e93d62c3d5" ContentHash="5lEKTJfXGU-tY7E1boaBQg" CvElementArea="77, 462, 362, 47" CvType="InputBox" DesignTimeRectangle="122, 565, 315, 43" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='refine_region' tag='INPUT' type='text' class='d3-textfield__field d3-textfield__field--white tt-input' placeholder='Ubicación' aaname='' /&gt;" Guid="04c70908-6ec8-4e35-9dda-d07a2cdb0b92" InformativeScreenshot="554270b2f6c4996b648a49a4e8c5749d.png" Reference="WifPJQDcckyo2lO85Q63oQ/dXcEuTd1d06lZLd4Ayblog" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="93a7b9d1-908e-4141-b84e-20273f96d814" CvElementArea="78, 562, 361, 47" CvType="InputBox" DesignTimeRectangle="92, 578, 16, 16" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' parentid='filters-replacable' tag='svg' class='d3-icon ' aaname='    ' /&gt;" Guid="80d61cb3-6ace-4c17-8812-739aea9bd4de" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Guatemala'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="00de1914-969b-405c-829e-d5f3cd87a7a1" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/guatemala" CVScreenId="39069ff8-2cab-4df6-ae85-662ea91bf4d9" ContentHash="UYAVq__AKEWIHRIM3-Wjcg" CvTextArea="134, 654, 77, 13" CvTextArgument="Guatemala" CvType="Text" DesignTimeRectangle="79, 646, 358, 32" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl type='' parentid='filters-replacable' tag='DIV' class='d3-suggestion tt-suggestion tt-selectable' aaname='             ' check:innerText='Guatemala' /&gt;" Guid="b2ed4bda-b80a-484a-81d3-bacf859a84dd" InformativeScreenshot="d785761c9bd84bf954fcdb17c659f52c.png" Reference="WifPJQDcckyo2lO85Q63oQ/hZzk-HQMKkWMq4PLKRUAzA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="39069ff8-2cab-4df6-ae85-662ea91bf4d9" CvElementArea="90, 607, 20, 21" CvType="Icon" DesignTimeRectangle="92, 610, 16, 16" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' parentid='filters-replacable' tag='svg' class='d3-icon ' aaname='    ' /&gt;" Guid="f74ebd97-2f31-4c37-90cd-dad0e76e5276" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF6SURBVDhPvZIxi8JAEIXv96fRCIIWdhaKWliINlrYRLARJYiClRaKojY2aeb4BibsJnseB3LFhzPz3jzCOl9Zlskn+b/A2+0ms9lM+v2+1Ot1hZoZWmgHgoGr1UoqlYoMh0NJ01Tu97tCzQwNT2i3FLjf7yWKIkmSxJu7oOHBW9S8wNPppMb1ep3PxuOxNBoNhdrmePCyYzPwAieTiXS73byfz+f6bvy6tel42bEevMB2uy3T6VRrHp4vOBwOuU7NzP4UvOyYDl5gtVqV7Xar9fF41OXn85nr1MzQ6PGyYzp4gbzTYrHQ+vV6SbPZlOVymevUzNDo8bJjOniBvV5PBoNB3u92O4UbZNF60/GyYz14gZvNRuI4lsvl4pnoQzO87LhzLxA6nU7poUPgwVuclwIfj4fUajXv5oqg4cFb1EqBYAfu3pzBDK140EYwEM7ncynUwtBcr8uPgcBiq9WS0WikUL8Lg7eBcL1e9TSAOuRx+TXwr3w4MJNv+TzKB1L+QsMAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Precio'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="00de1914-969b-405c-829e-d5f3cd87a7a1" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos" CVScreenId="0b77e045-4446-4fb2-951c-54eadfc459fc" ContentHash="RYnO9ZUUx0uKrG8c132F5w" CvTextArea="120, 578, 47, 14" CvTextArgument="Precio" CvType="Text" DesignTimeRectangle="78, 557, 360, 60" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl aaname='                                  ' parentid='filter-price' tag='DIV' type='' class='d3-dropdown__wrapper' check:innerText='Precio' /&gt;" Guid="6e709904-4e4f-4c09-a0ba-70db7c717422" InformativeScreenshot="e812320c320cf02cbaa6827bf2237831.png" Reference="WifPJQDcckyo2lO85Q63oQ/gE2y645NUkmw5VBEVU9SkA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="0b77e045-4446-4fb2-951c-54eadfc459fc" CvElementArea="85, 574, 27, 26" CvType="Icon" DesignTimeRectangle="89, 577, 20, 20" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl parentid='filter-price' tag='svg' type='' class='d3-icon d3-category-filters__filter-icon' aaname='    ' /&gt;" Guid="0709fa85-5688-424c-afd1-806268deb1f9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFqSURBVEhL1ZOxq4JQFIff398UNNQS0eLaEg7RJIpDNjYYNBYFDeUg4XIe34UrV6/eqw8a3vChnnP8fXq9/lRVJd/k/wlOp5NsNpv6epQgiiI5Ho+S57lcr1d5v9+NPuGTyUQddW2wgHBuXq/XslgsZDqdqmuYzWayWq2scBgk0OHtm1+vl9xuN0nTVPWRmH3wCvrCL5eLJEkiu91O9eM4Vm9izoBT0BcOYRjKcrlU7Pd79SbMtud6Ba5wMAXb7VYtF/PtD98p8IVT10vE7PP5VHU+PLvLnLUErnCelB5kWWb12V1sYbPWELjCeWJ6+tjuA1uY/8Ss1QLfk5dlqfrn81k+n481w330yTHrXgFrGgSBOp/P51YA9IWDd4nu97uq6T/18XjUPXCFg/cjI6B2OBykKIrGrC8cLAF0vUmbIeHQKQCXZGg49AqgSzImHJwCMCVjw8ErAC0ZGw6DBEDw2HAYLPgrXxZU8gtEbFumsjkNLwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT range-lower'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="00de1914-969b-405c-829e-d5f3cd87a7a1" Text="500,000" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos" CVScreenId="021c9fbe-7d74-4752-b4d2-da5857304173" ContentHash="s71PR2zJf0ebNtdrDIKD6A" CvElementArea="96, 470, 125, 40" CvTextArea="145, 480, 26, 20" CvTextArgument="min" CvType="Button" DesignTimeRectangle="99, 472, 120, 36" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl name='f_price[from]' tag='INPUT' type='text' class='d3-textfield__field' placeholder='min' aaname='' /&gt;" Guid="b14a7117-854b-4f79-8f67-b82193e50cd8" InformativeScreenshot="e5f8f2c9c686c3a55d7c934e51471820.png" Reference="WifPJQDcckyo2lO85Q63oQ/HSe_An-YEkemeWG5LIXm6g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="021c9fbe-7d74-4752-b4d2-da5857304173" CvElementArea="86, 373, 27, 26" CvType="Icon" DesignTimeRectangle="89, 377, 20, 20" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl parentid='filter-price' tag='svg' type='' class='d3-icon d3-category-filters__filter-icon' aaname='    ' /&gt;" Guid="a81e03d9-83ed-4dd1-a73d-177d62cb08db" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFqSURBVEhL1ZOxq4JQFIff398UNNQS0eLaEg7RJIpDNjYYNBYFDeUg4XIe34UrV6/eqw8a3vChnnP8fXq9/lRVJd/k/wlOp5NsNpv6epQgiiI5Ho+S57lcr1d5v9+NPuGTyUQddW2wgHBuXq/XslgsZDqdqmuYzWayWq2scBgk0OHtm1+vl9xuN0nTVPWRmH3wCvrCL5eLJEkiu91O9eM4Vm9izoBT0BcOYRjKcrlU7Pd79SbMtud6Ba5wMAXb7VYtF/PtD98p8IVT10vE7PP5VHU+PLvLnLUErnCelB5kWWb12V1sYbPWELjCeWJ6+tjuA1uY/8Ss1QLfk5dlqfrn81k+n481w330yTHrXgFrGgSBOp/P51YA9IWDd4nu97uq6T/18XjUPXCFg/cjI6B2OBykKIrGrC8cLAF0vUmbIeHQKQCXZGg49AqgSzImHJwCMCVjw8ErAC0ZGw6DBEDw2HAYLPgrXxZU8gtEbFumsjkNLwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT range-upper'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="00de1914-969b-405c-829e-d5f3cd87a7a1" Text="800,000" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos" ContentHash="jrANOQlQ40-Fh6xceQOA8w" DesignTimeRectangle="261, 472, 120, 36" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl name='f_price[to]' tag='INPUT' type='text' class='d3-textfield__field' placeholder='max' aaname='' /&gt;" Guid="11fc48f0-f131-40f3-8058-b48ae48991ac" InformativeScreenshot="3256dc02092b1917c6e0323f5ab73b41.png" Reference="WifPJQDcckyo2lO85Q63oQ/UmvHQ4trC0GylQFOnGVTjA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="445de07e-9b36-498f-966d-07664dd543b6" CvElementArea="86, 373, 27, 26" CvType="Icon" DesignTimeRectangle="89, 377, 20, 20" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl parentid='filter-price' tag='svg' type='' class='d3-icon d3-category-filters__filter-icon' aaname='    ' /&gt;" Guid="7b4266f5-5ec0-4f93-8060-1f93526a3cbf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFqSURBVEhL1ZOxq4JQFIff398UNNQS0eLaEg7RJIpDNjYYNBYFDeUg4XIe34UrV6/eqw8a3vChnnP8fXq9/lRVJd/k/wlOp5NsNpv6epQgiiI5Ho+S57lcr1d5v9+NPuGTyUQddW2wgHBuXq/XslgsZDqdqmuYzWayWq2scBgk0OHtm1+vl9xuN0nTVPWRmH3wCvrCL5eLJEkiu91O9eM4Vm9izoBT0BcOYRjKcrlU7Pd79SbMtud6Ba5wMAXb7VYtF/PtD98p8IVT10vE7PP5VHU+PLvLnLUErnCelB5kWWb12V1sYbPWELjCeWJ6+tjuA1uY/8Ss1QLfk5dlqfrn81k+n481w330yTHrXgFrGgSBOp/P51YA9IWDd4nu97uq6T/18XjUPXCFg/cjI6B2OBykKIrGrC8cLAF0vUmbIeHQKQCXZGg49AqgSzImHJwCMCVjw8ErAC0ZGw6DBEDw2HAYLPgrXxZU8gtEbFumsjkNLwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+              </uix:NTypeInto>
+              <uix:NSelectItem DisplayName="Seleccionar elemento 'USE'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="US$" ScopeIdentifier="00de1914-969b-405c-829e-d5f3cd87a7a1" Version="V4">
+                <uix:NSelectItem.Items>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>Q</x:String>
+                    <x:String>US$</x:String>
+                  </scg:List>
+                </uix:NSelectItem.Items>
+                <uix:NSelectItem.Target>
+                  <uix:TargetAnchorable BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/guatemala.2" ContentHash="O6nx0Iy9mkmBDobMDW_Y-w" DesignTimeRectangle="98, 560, 320, 43" DesignTimeScaleFactor="1" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='currency' tag='SELECT' type='' class='' aaname='' /&gt;" Guid="a1387720-1717-4a9c-b719-52bfb877270b" InformativeScreenshot="8373f5785b1a06f51a0971778039462e.png" Reference="WifPJQDcckyo2lO85Q63oQ/kz9Yfix-kk67o2YsB5-Tlw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="4bf60506-b150-4068-b6ca-4507a74f22b7" CvElementArea="86, 516, 26, 26" CvType="Icon" DesignTimeRectangle="89, 519, 20, 20" FuzzySelectorArgument="&lt;webctrl parentid='filter-price' tag='use' type='' class='' aaname='' /&gt;" Guid="696efa62-04c9-442b-bf88-1be8ab1b6ca0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF7SURBVEhL1ZOxqoNAEEXfr1lbWAY7IUJKP8FS7ALWplBIFyG9ZUiTPiQQUtgJSScINvO4AyurG3f1QYpXHDbOjPfouvnpuo6+yf8TlGVJYRj214sEaZrS8Xik0+lEt9uNXq/XoI9wy7J4FbXZAoTj5s1mQ67rkm3bfA0cx6H1eq2Eg1kCET6+ua5rut/vtN/vuQ+J3AdGwVT45XKhPM9pu91yP8syfhN5BmgFU+EgjmPyPI9JkoTfBLPjuUmBLhzIgiiKeLswP/7wHwWmcNTFFmG2qiqu48PjdMmzikAXjidFDxRFofRxunCE5dpAoAvHE6Mn1nEf4AjjfyLXeoHpyZum4f75fKa2bZUZ3Ic+cuS6UXC9XikIAv69Wq2UACDCd7ud0jNu0ePx4Jrv+7w+n8++B3ThwPiRIUDtcDjQ+/0ezJrCgSIAU9slMyccfBQAnWRuOJgUgE8SEY6ePDuFVgBkydJwYBQAIVkaDmYJAIKXhoPZgr/yZUFHv7gfC8nkFmR+AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NSelectItem.Target>
+              </uix:NSelectItem>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Filtro Precio'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="00de1914-969b-405c-829e-d5f3cd87a7a1" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos" CVScreenId="445de07e-9b36-498f-966d-07664dd543b6" ContentHash="RkkXnMVNokKvqyrD-1lEnA" CvElementArea="389, 474, 32, 32" CvTextArea="398, 481, 11, 14" CvType="Icon" DesignTimeRectangle="392, 477, 26, 26" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='ir' parentid='filter-price' tag='BUTTON' type='button' class='' check:innerText='ir' /&gt;" Guid="08100ebb-ecae-48b8-8eb1-1b150af54ae3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF6SURBVEhLzZY9yoQwEIa/q4k32AOIpZ21d9gTLF7DE2hrY20hy8LCFh5A0Pl4hUhM3tX4A27xQDCTeXBMJv51XSdX8Pviqqrk8XhIHMdyu93E9/0RjPEMc4hhaxmr4qIoxsSe5zmBWKxhuXQWxff7nSZ3AWtZTgUVt2276S2/gRzIxRxUfIZUgVzMYYmPlPcbrOwzMTYFW6iIomiEza1hbriZeKnEEL7fb/l8Prs+hVnySYwzyBbopGk6wuZc0M/5JEYDYMEuJEni9AngsMQu5SvLUpqmmcZ1Xcvz+ZRhGCTLMiveRC/3JEbrY8E6prjve8nzXMIwtGIZcFhi9F0WrGOKX6+XBEFgxX0DjlPEauwKFe8p9VYxLfWezbVVTDeXy3E6KqbHyaWBHIU2EOBS7r3oZQYz8dolcYTFSwJcci0qziy5WWIFFV/266M4UnZWXp1FMcCm2PL2iDU3EmNVrMAZRANAYrQ+9F2AMZ5hTj+naziLz+YicSf/MVqR6kiyh3sAAAAASUVORK5CYII=" InformativeScreenshot="4e00727eb28fd57d0a16062398284bec.png" Reference="WifPJQDcckyo2lO85Q63oQ/xyDeRkYooEe0pQ5dlYDqeQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="445de07e-9b36-498f-966d-07664dd543b6" CvElementArea="86, 373, 27, 26" CvType="Icon" DesignTimeRectangle="89, 377, 20, 20" FuzzySelectorArgument="&lt;webctrl parentid='filter-price' tag='use' type='' class='' aaname='' /&gt;" Guid="2a460645-67c1-40ed-9dcc-04484843f912" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFqSURBVEhL1ZOxq4JQFIff398UNNQS0eLaEg7RJIpDNjYYNBYFDeUg4XIe34UrV6/eqw8a3vChnnP8fXq9/lRVJd/k/wlOp5NsNpv6epQgiiI5Ho+S57lcr1d5v9+NPuGTyUQddW2wgHBuXq/XslgsZDqdqmuYzWayWq2scBgk0OHtm1+vl9xuN0nTVPWRmH3wCvrCL5eLJEkiu91O9eM4Vm9izoBT0BcOYRjKcrlU7Pd79SbMtud6Ba5wMAXb7VYtF/PtD98p8IVT10vE7PP5VHU+PLvLnLUErnCelB5kWWb12V1sYbPWELjCeWJ6+tjuA1uY/8Ss1QLfk5dlqfrn81k+n481w330yTHrXgFrGgSBOp/P51YA9IWDd4nu97uq6T/18XjUPXCFg/cjI6B2OBykKIrGrC8cLAF0vUmbIeHQKQCXZGg49AqgSzImHJwCMCVjw8ErAC0ZGw6DBEDw2HAYLPgrXxZU8gtEbFumsjkNLwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            </Sequence>
+            <Sequence DisplayName="CsvTable" sap:VirtualizedContainerService.HintSize="536,1036" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="terrenosTabla" />
+                <Variable x:TypeArguments="x:String" Name="nameTabla" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[terrenosTabla]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Vendedor'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Precio'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Lugar'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Descripción'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Contacto'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='6' /&gt;&lt;webctrl tag='button' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="00de1914-969b-405c-829e-d5f3cd87a7a1" Version="V4">
+                <uix:NExtractData.NextLink>
+                  <uix:TargetAnchorable BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos" CVScreenId="301eaaa4-4142-4ea7-9688-296fe2c9dfef" CvTextArea="1015, 613, 78, 20" CvTextArgument="Siguiente" CvType="Text" DesignTimeRectangle="1016, 610, 77, 25" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Siguiente' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;span' parentid='currentlistings' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Siguiente' type='' parentid='currentlistings' tag='SPAN' class='d3-pagination__arrow--text' check:innerText='Siguiente' /&gt;" Guid="b75bb026-2f6f-4f28-b6ac-27349b3e17f1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lotes y terrenos en venta en Guatemala desde Q 500,000 hasta Q 800,000' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                    <uix:TargetAnchorable.PointOffset>
+                      <uix:PointOffset />
+                    </uix:TargetAnchorable.PointOffset>
+                  </uix:TargetAnchorable>
+                </uix:NExtractData.NextLink>
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos?regionslug=guatemala,guatemala&amp;q=f_price.500000-800000" ContentHash="ZFwgGtG1SUaFbTc4iScOFg" DesignTimeRectangle="470, 271, 1054, 8488" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='currentlistings' tag='DIV' /&gt;" Guid="64205f0d-5025-444b-87de-5ffa04323c54" InformativeScreenshot="e025ff7daed8322967ac551ee2c3ad0b.png" Reference="WifPJQDcckyo2lO85Q63oQ/NDtRD4s_rUCb7IHSAlSJ2Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lotes y terrenos en venta en Guatemala desde Q 500,000 hasta Q 800,000' /&gt;" SearchSteps="Selector" Version="V5" Visibility="Interactive" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+              <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,269" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V4">
+                <uix:NMouseScroll.SearchedElement>
+                  <uix:SearchedElement>
+                    <uix:SearchedElement.Target>
+                      <uix:TargetAnchorable BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/guatemala.2" CVScreenId="e6805b69-3434-45ff-9a41-172795ce184a" ContentHash="I2b9Wn_nEEeE9U2ZPVOHGA" CvElementArea="1066, 275, 45, 45" CvTextArea="911, 289, 182, 16" CvTextArgument="Anterior 1 2" CvType="Button" DesignTimeRectangle="470, 578, 1054, 40" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl type='' class='d3-pagination' parentid='currentlistings' tag='DIV' aaname='               ' check:innerText='Anterior&amp;#xA;1&amp;#xA;2' /&gt;" Guid="99f9b309-17c6-47b9-991f-dcaee1e6af8a" InformativeScreenshot="78e9a06f4c845dc415936c7f728d8c5a.png" Reference="WifPJQDcckyo2lO85Q63oQ/THVWC-0bzk2TKdoG5_eSzQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="13c8d5fa-086e-45be-81f7-82d6f8f320aa" CvElementArea="890, 587, 19, 21" CvType="ArrowButton" DesignTimeRectangle="893, 592, 12, 12" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' parentid='currentlistings' tag='svg' class='d3-icon d3-pagination__arrow-icon' aaname='    ' /&gt;" Guid="fdc02f6b-ee42-4cf4-84ce-f5ddafd357e5" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:SearchedElement.Target>
+                    <uix:SearchedElement.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:SearchedElement.Timeout>
+                  </uix:SearchedElement>
+                </uix:NMouseScroll.SearchedElement>
+              </uix:NMouseScroll>
+              <ui:OutputDataTable Text="{x:Null}" DataTable="[terrenosTabla]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" />
+              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[nameTabla]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["Reportes/Reporte_Terrenos_" + DateTime.Now.ToString("dd_MM_yyyy_HH_mm_ss") + ".xlsx"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[terrenosTabla]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Terrenos" WorkbookPath="[nameTabla]" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:10" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,110" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Proceso Terminado&quot;]" />
+            </Sequence>
+            <Sequence DisplayName="SMTP" sap:VirtualizedContainerService.HintSize="536,793" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="3044397700114@ingenieria.usac.edu.gt" DisplayName="Use Gmail" EmailAddress="3044397700114@ingenieria.usac.edu.gt" sap:VirtualizedContainerService.HintSize="502,706" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+                <umab:GmailApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="468,497" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="Prueba" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,435" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="autorizados-registro-contabilidad" To="ediaz3535@gmail.com" UseDocumentAsBody="False">
+                        <umab:SendMailX.Files>
+                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                            <InArgument x:TypeArguments="x:String">C:\Users\Eddy\Documents\UiPath\auto1\Reportes</InArgument>
+                          </scg:List>
+                        </umab:SendMailX.Files>
+                        <umab:SendMailX.HtmlBodyFromFile>
+                          <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
+                            <umabh:HtmlContentArgument.RuntimeImages>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </umabh:HtmlContentArgument.RuntimeImages>
+                            <umabh:HtmlContentArgument.ValueMappings>
+                              <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                            </umabh:HtmlContentArgument.ValueMappings>
+                          </umabh:HtmlContentArgument>
+                        </umab:SendMailX.HtmlBodyFromFile>
+                      </umab:SendMailX>
+                    </Sequence>
+                  </ActivityAction>
+                </umab:GmailApplicationCard.Body>
+                <umab:GmailApplicationCard.ClientId>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </umab:GmailApplicationCard.ClientId>
+                <umab:GmailApplicationCard.ClientSecret>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </umab:GmailApplicationCard.ClientSecret>
+              </umab:GmailApplicationCard>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1616, 868" BrowserType="Chrome" ContentHash="_gwxMM9DAUCnf2IyQAJACw" IconBase64="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" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="c4a5739311b2b41e2b429421e007abd5.png" Reference="WifPJQDcckyo2lO85Q63oQ/kJ-UkYeZN0q6E4cA5JO8-Q" Selector="&lt;html app='chrome.exe' url='https://www.encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos' /&gt;" Url="https://www.encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

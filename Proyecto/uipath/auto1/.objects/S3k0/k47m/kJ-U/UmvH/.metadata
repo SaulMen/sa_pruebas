@@ -1,0 +1,14 @@
+﻿{
+  "Name": "INPUT range-upper-68088…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "UmvHQ4trC0GylQFOnGVTjA",
+  "Reference": "WifPJQDcckyo2lO85Q63oQ/UmvHQ4trC0GylQFOnGVTjA",
+  "ParentRef": "WifPJQDcckyo2lO85Q63oQ/kJ-UkYeZN0q6E4cA5JO8-Q",
+  "Created": "2025-04-23T12:50:15.1872511Z",
+  "Updated": "2025-04-23T12:50:15.1872511Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

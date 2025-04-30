@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="O6nx0Iy9mkmBDobMDW_Y-w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="encuentra24.com/guatemala-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/guatemala.2" DesignTimeRectangle="98, 560, 320, 43" DesignTimeScaleFactor="1" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='currency' tag='SELECT' type='' class='' aaname='' /&gt;" Guid="a1387720-1717-4a9c-b719-52bfb877270b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Terrenos Guatemala | Venta de terrenos y lotes en Guatemala' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="4bf60506-b150-4068-b6ca-4507a74f22b7" CvElementArea="86, 516, 26, 26" CvType="Icon" DesignTimeRectangle="89, 519, 20, 20" FuzzySelectorArgument="&lt;webctrl parentid='filter-price' tag='use' type='' class='' aaname='' /&gt;" Guid="696efa62-04c9-442b-bf88-1be8ab1b6ca0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF7SURBVEhL1ZOxqoNAEEXfr1lbWAY7IUJKP8FS7ALWplBIFyG9ZUiTPiQQUtgJSScINvO4AyurG3f1QYpXHDbOjPfouvnpuo6+yf8TlGVJYRj214sEaZrS8Xik0+lEt9uNXq/XoI9wy7J4FbXZAoTj5s1mQ67rkm3bfA0cx6H1eq2Eg1kCET6+ua5rut/vtN/vuQ+J3AdGwVT45XKhPM9pu91yP8syfhN5BmgFU+EgjmPyPI9JkoTfBLPjuUmBLhzIgiiKeLswP/7wHwWmcNTFFmG2qiqu48PjdMmzikAXjidFDxRFofRxunCE5dpAoAvHE6Mn1nEf4AjjfyLXeoHpyZum4f75fKa2bZUZ3Ic+cuS6UXC9XikIAv69Wq2UACDCd7ud0jNu0ePx4Jrv+7w+n8++B3ThwPiRIUDtcDjQ+/0ezJrCgSIAU9slMyccfBQAnWRuOJgUgE8SEY6ePDuFVgBkydJwYBQAIVkaDmYJAIKXhoPZgr/yZUFHv7gfC8nkFmR+AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8373f5785b1a06f51a0971778039462e.png" xmlns="">0J04CGtk4LEOXB3srjDPuIg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
